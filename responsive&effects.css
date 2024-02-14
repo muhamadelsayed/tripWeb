@@ -1,0 +1,102 @@
+/* effects start */
+:root{
+    --heightBC:100%;
+}
+#submitEmail,.book,.more ,.ul li{
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.ul li:hover{
+    color: #ff9800;
+}
+#submitEmail:hover,.book:hover,.more:hover{
+    background-color: #3c3e3d;
+    color: azure;
+}
+/* effects end */
+/* responsive start */
+@media screen  and (max-width:767px) {
+    header{
+        min-height: 50px;
+    }
+    .ul{
+        display: none;
+        min-height: 250px;
+    }
+    #middle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #midsec{
+        height: 30vh;
+        min-height: 275px;
+        min-width: 250px;
+    }
+    #midsec img{
+        max-height: 180px;
+    }
+    #greenCircle{
+        max-height: 180px;
+
+    }
+    #moveable{
+        min-width: 240px;
+    }
+    #filledcircled{
+        min-width: 3em;
+        min-height: 3em;
+        max-width: 6.5em;
+        max-height: 6.5em;
+    aspect-ratio: 1/1;
+    }
+    aside{
+        height: 20vh;
+        min-height: 175px;
+        flex-wrap: nowrap;
+        min-width: 190px;
+    }
+    footer{
+        height:-webkit-fill-available;
+        height: 15vh;
+        min-height: 150px;
+    }
+    #icons{
+        display: flex;
+        flex-direction: column;
+    }
+    #icons p{
+        margin: 10px;
+    }
+    .brownCircle{
+       height: calc(var(--heightBC) + 30px);
+       width: 40%;
+       transform: translate(0,-30px);
+       font-size:x-small;
+       justify-content: space-evenly;
+    }
+}
+@media screen and (min-width:700px) and (max-width:767px) {
+   #filledcircled{
+    right: 30%;
+   } 
+}
+
+@media screen and (min-width:768px) {
+    #open{
+        display: none;
+    }
+    .ul{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-right: 5%;
+        list-style: none;
+        gap: 20px;
+        flex-wrap: wrap;
+        color: #3a3937;
+    }
+}
+
+/* responsive end */

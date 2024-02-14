@@ -1,0 +1,132 @@
+/* header section start */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: smaller;
+    height: 15vh;
+    min-height: 50px;
+    width: 100%;
+}
+#headerDiv a{
+    text-decoration: none;
+    color: inherit;
+}
+#open{
+    width: 2.5em;
+    height: 2.5em;
+    transform: translate(-75%, 10px);
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+#open div{
+    width: inherit;
+    height: 10px;
+    background-color: #312d2c;
+    border-radius: 5%;
+    margin-top: 10px;
+    position: absolute;
+    transition: transform 0.5s ease, margin-top 0.5s ease;
+    transform-origin: 50% 50%;
+}
+#open:not(.active) div:nth-child(1) {
+    margin-top: 0;
+}
+
+#open:not(.active) div:nth-child(2) {
+    margin-top: 16px;
+}
+#open.active {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+}
+.ul-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+    margin: 0;
+    z-index: 1;
+    background: #383433;
+    color: #fcf0f0;
+    list-style: none;
+    gap: 20px;
+}
+#open.active div:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+#open.active div:nth-child(2) {
+    transform: rotate(-45deg);
+}
+.ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-right: 5%;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: #3a3937;
+}
+.ul li{
+    color: inherit;
+    height: fit-content;
+}
+#prand-name{
+    margin: 20px;
+    position: absolute;
+    left: 0;
+    color: #383433;
+    font-size: larger;
+}#prand-name span{
+    font-weight: bolder;
+}
+/* effects start */
+.ul li{
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.ul li:hover{
+    color: #ff9800;
+}
+/* effects end */
+/* header section end */
+/* responsive */
+@media screen and (max-width:767px) {
+    header{
+        min-height: 50px;
+    }
+    .ul{
+        display: none;
+        min-height: 250px;
+    }
+}
+@media screen and (min-width:768px) {
+    #open{
+        display: none;
+    }
+    .ul{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-right: 5%;
+        list-style: none;
+        gap: 20px;
+        flex-wrap: wrap;
+        color: #3a3937;
+    }
+}

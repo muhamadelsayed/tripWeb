@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer - Pricing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="facico.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f8f9fa, #cfd8dc);
+            color: #343a40;
+        }
+
+        header {
+            background: linear-gradient(to right, #007BFF, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 1.5em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1em;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 0.5em 1em;
+            margin: 0 0.5em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .pricing-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            margin: 1.5em;
+            width: 300px;
+            text-align: left;
+            background-color: white;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .pricing-card h2 {
+            color: #007BFF;
+            margin-bottom: 0.5em;
+        }
+
+        .pricing-card p {
+            color: #666;
+            margin-bottom: 1em;
+        }
+
+        .pricing-card .icon {
+            font-size: 1.5em;
+            margin-right: 0.5em;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .pricing-card:hover .icon {
+            transform: rotate(360deg);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                position: relative;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            nav.show {
+                max-height: 300px;
+            }
+
+            nav a {
+                display: block;
+                width: 100%;
+                margin: 0.5em 0;
+            }
+
+            section {
+                border-radius: 0;
+            }
+        }
+
+        /* Smooth Scroll Animation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Font Sizes */
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        h2, h3, p {
+            margin-bottom: 1em;
+        }
+
+        /* Customized FAQ Styles */
+        section:last-child {
+            background-color: #f8f9fa;
+        }
+
+        h2:last-child {
+            color: #007BFF;
+        }
+
+        p:last-child {
+            color: #666;
+            margin-bottom: 2em;
+        }
+
+        .faq-item {
+            text-align: left;
+            margin-bottom: 1em;
+        }
+
+        .faq-item i {
+            margin-right: 0.5em;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="headerDiv">
+        <div></div>
+        <div id="prand-name"><a href="#"><span>BRAND</span> NAME</a></div>
+        <div id="open" style="z-index: 3;">
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="ul" id="ul-container" style="z-index: 2;">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about-us/index.html">ABOUT US</a></li>
+            <li><a href="../gallery/index.html">GALLERY</a></li>
+            <li><a href="../contact-us/index.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <header id="home">
+        <h1>Travel Explorer</h1>
+        <p>Choose the Perfect Plan for Your Adventure</p>
+    </header>
+
+    <section id="destinations">
+        <div class="pricing-card">
+            <h2><i class="icon fas fa-rocket"></i> Basic Explorer</h2>
+            <p>Price: $49.99</p>
+            <p>Ideal for solo travelers on a budget</p>
+            <p>Access to basic travel itineraries</p>
+            <p>Limited customer support</p>
+            <p>No cancellation insurance</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+            <h2><i class="icon fas fa-users"></i> Family Package</h2>
+            <p>Price: $99.99/month</p>
+            <p>Perfect for families or small groups</p>
+            <p>Customized itineraries for family-friendly experiences</p>
+            <p>Priority customer support</p>
+            <p>Limited cancellation insurance</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+            <h2><i class="icon fas fa-gem"></i> Premium Explorer</h2>
+            <p>Price: $149.99/month</p>
+            <p>For travelers seeking a premium experience</p>
+            <p>Personalized and detailed itineraries</p>
+            <p>24/7 premium customer support</p>
+            <p>Comprehensive cancellation insurance</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+            <h2><i class="icon fas fa-mountain"></i> Adventure Enthusiast</h2>
+            <p>Price: $199.99/month</p>
+            <p>Tailored for adventure seekers</p>
+            <p>Access to exclusive adventure itineraries</p>
+            <p>Expedited visa processing assistance</p>
+            <p>Premium customer support</p>
+            <p>Full cancellation insurance</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <i class="fas fa-question"></i>
+            <strong>Is there a free trial?</strong>
+            <p>Yes, we offer a 7-day free trial for all plans. You can explore the features and benefits risk-free before committing.</p>
+        </div>
+        
+        <div class="faq-item">
+            <i class="fas fa-question"></i>
+            <strong>Can I switch plans?</strong>
+            <p>Certainly! You can upgrade or downgrade your plan at any time. Your new plan will take effect at the beginning of the next billing cycle.</p>
+        </div>
+        
+        <div class="faq-item">
+            <i class="fas fa-question"></i>
+            <strong>Is there a refund policy?</strong>
+            <p>We offer a 30-day money-back guarantee. If you are not satisfied with our service, you can request a full refund within the first 30 days of your subscription.</p>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
